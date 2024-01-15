@@ -3,7 +3,6 @@ package org.example;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Main1 {
     List<Double> ans = new ArrayList<>();
@@ -36,8 +35,8 @@ public class Main1 {
         if (root == null) return;
         ArrayList<Integer> temp = map.getOrDefault(level, new ArrayList<>());
         temp.add(root.val);
-        map.put(level, temp) ;
-        avgLvls(root.left, level+1);
-        avgLvls(root.right, level+1);
+        map.put(level, temp);
+        avgLvls(root.left, level + 1);
+        avgLvls(root.right, level + 1);
     }
 }
